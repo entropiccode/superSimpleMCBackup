@@ -50,10 +50,10 @@ fi
 
 # Saves the name of the world to a variable for later use.
 #
-# If the script detects the presence of a server.properties folder, it will
+# If the script detects the presence of a server.properties file, it will
 #   pull the world name from that file.
 #
-# If no server.properties folder is found, it will use the defined world name.
+# If no server.properties file is found, it will use the defined world name.
 #
 # Configure the worldName to your world folder if not running the script in your
 #   minecraft server directory.
