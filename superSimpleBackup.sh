@@ -38,6 +38,7 @@ fi
 # The backup directory is a folder named "backup" in the server directory by default.
 #
 # Change serverDir to your minecraft server directory if not running from that directory.
+# If running from crontab this should be set manually.
 # Change backupDir to your desired backup directory if not the default.
 serverDir=$PWD
 backupDir=$serverDir/backup
@@ -58,8 +59,8 @@ fi
 # Configure the worldName to your world folder if not running the script in your
 #   minecraft server directory.
 worldName="asdf"
-if [ -f "server.properties" ]; then
-    worldName=$(grep level-name server.properties | cut -d= -f2)
+if [ -f "$serverDir/server.properties" ]; then
+    worldName=$(grep level-name "$serverDir/server.properties" | cut -d= -f2)
     echo "Getting world name from server.properties: $worldName"
 fi
 
